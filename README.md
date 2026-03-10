@@ -10,23 +10,6 @@
 
 ---
 
-## 📋 Table of Contents
-
-- [About the Project](#about-the-project)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Project Architecture](#project-architecture)
-- [Getting Started](#getting-started)
-- [Running Tests](#running-tests)
-- [Test Scenarios](#test-scenarios)
-- [Flight Selection Strategies](#flight-selection-strategies)
-- [Screenshots](#screenshots)
-- [Jenkins CI/CD](#jenkins-cicd)
-- [Project Structure](#project-structure)
-- [Author](#author)
-
----
-
 ## 🎯 About the Project
 
 This is a **comprehensive test automation framework** developed as part of the **Wipro Pre-Skilling Capstone Project**. The framework automates the complete flight booking workflow on the [BlazeDemo](https://blazedemo.com/) application.
@@ -69,124 +52,6 @@ This is a **comprehensive test automation framework** developed as part of the *
 | Apache POI | 5.2.4 | Excel File Handling |
 | WebDriverManager | 5.6.2 | Driver Management |
 | Jenkins | Latest | CI/CD Automation |
-| Git | Latest | Version Control |
-
----
-
-## 🏗️ Project Architecture
-
-### High-Level Architecture
-┌──────────────────────────────────────────────────────────────┐
-│ TEST AUTOMATION FRAMEWORK │
-├──────────────────────────────────────────────────────────────┤
-│ │
-│ ┌──────────┐ ┌──────────┐ ┌──────────┐ │
-│ │ TestNG │ ──► │ Test │ ──► │ Page │ │
-│ │ Suite │ │ Class │ │ Objects │ │
-│ └──────────┘ └──────────┘ └──────────┘ │
-│ │ │ │ │
-│ ▼ ▼ ▼ │
-│ ┌──────────┐ ┌──────────┐ ┌──────────┐ │
-│ │ Excel │ │ Utility │ │ WebDriver│ │
-│ │ Reader │ │ Classes │ │ Manager │ │
-│ └──────────┘ └──────────┘ └──────────┘ │
-│ │ │ │ │
-│ └────────────────┼─────────────────┘ │
-│ ▼ │
-│ ┌──────────┐ │
-│ │ BlazeDemo│ │
-│ │ App │ │
-│ └──────────┘ │
-│ │
-└──────────────────────────────────────────────────────────────┘
-
-
-### Layered Architecture
-┌────────────────────────────────────────────────────────────┐
-│ PRESENTATION LAYER │
-│ (TestNG Test Suite) │
-│ testng.xml, Test Listeners │
-└────────────────────────────┬───────────────────────────────┘
-│
-┌────────────────────────────▼───────────────────────────────┐
-│ TEST EXECUTION LAYER │
-│ (FlightBookingTest.java) │
-│ Test Methods, Data Provider, Assertions │
-└────────────────────────────┬───────────────────────────────┘
-│
-┌────────────────────────────▼───────────────────────────────┐
-│ PAGE OBJECT LAYER │
-│ ┌────────────┐ ┌────────────┐ ┌────────────┐ │
-│ │ HomePage │ │FlightList │ │ Purchase │ │
-│ │ │ │ Page │ │ Page │ │
-│ └────────────┘ └────────────┘ └────────────┘ │
-│ ┌────────────┐ │
-│ │Confirmation│ │
-│ │ Page │ │
-│ └────────────┘ │
-└────────────────────────────┬───────────────────────────────┘
-│
-┌────────────────────────────▼───────────────────────────────┐
-│ UTILITY LAYER │
-│ ┌────────────┐ ┌────────────┐ ┌────────────┐ │
-│ │ Driver │ │ Excel │ │ Screenshot │ │
-│ │ Manager │ │ Reader │ │ Util │ │
-│ └────────────┘ └────────────┘ └────────────┘ │
-└────────────────────────────┬───────────────────────────────┘
-│
-┌────────────────────────────▼───────────────────────────────┐
-│ CONFIGURATION LAYER │
-│ (TestConfig.java) │
-│ Base URL, Browser Settings, Timeouts │
-└────────────────────────────┬───────────────────────────────┘
-│
-┌────────────────────────────▼───────────────────────────────┐
-│ WEB APPLICATION LAYER │
-│ (BlazeDemo Website) │
-│ https://blazedemo.com/ │
-└────────────────────────────────────────────────────────────┘
-
-
-### Test Execution Flow
-START
-│
-├──► [1] Load TestNG Suite (testng.xml)
-│
-├──► [2] Execute @BeforeSuite
-│ └──► Load Excel file
-│
-├──► [3] FOR EACH TEST DATA ROW
-│ │
-│ ├──► [4] @BeforeMethod
-│ │ ├──► Initialize WebDriver
-│ │ └──► Initialize Page Objects
-│ │
-│ ├──► [5] @Test Method
-│ │ ├──► Step 1: Navigate to BlazeDemo
-│ │ ├──► Step 2: Select departure city
-│ │ ├──► Step 3: Select destination city
-│ │ ├──► Step 4: Click Find Flights
-│ │ ├──► Step 5: Verify flight list
-│ │ ├──► Step 6: Select flight
-│ │ ├──► Step 7: Verify purchase page
-│ │ ├──► Step 8: Enter personal details
-│ │ ├──► Step 9: Enter payment details
-│ │ ├──► Step 10: Click Purchase
-│ │ └──► Step 11: Verify confirmation
-│ │
-│ └──► [6] @AfterMethod
-│ ├──► Capture screenshot
-│ └──► Quit WebDriver
-│
-├──► [7] Execute @AfterSuite
-│ └──► Close Excel, Display stats
-│
-└──► [8] Generate Reports
-├──► TestNG HTML Report
-├──► Surefire XML Report
-└──► Screenshots
-END
-
 
 ---
 
@@ -196,22 +61,16 @@ END
 
 | Software | Version | Download |
 |----------|---------|----------|
-| Java JDK | 17+ | [Download](https://adoptium.net/) |
+| Java JDK | 11+ | [Download](https://adoptium.net/) |
 | Maven | 3.6+ | [Download](https://maven.apache.org/) |
 | Git | Latest | [Download](https://git-scm.com/) |
 | Chrome | Latest | [Download](https://google.com/chrome/) |
 
-### Verify Installation
+### Installation
+
+**Step 1: Clone Repository**
 
 ```bash
-java -version
-mvn -version
-git --version
-Installation Steps
-Step 1: Clone Repository
-
-Bash
-
 git clone https://github.com/prashanth110203/FlightTicketAutomation.git
 cd FlightTicketAutomation
 Step 2: Install Dependencies
@@ -225,7 +84,6 @@ Bash
 
 mvn exec:java -Dexec.mainClass="com.blazedemo.utils.ExcelFileCreator"
 ▶️ Running Tests
-Using Maven
 Bash
 
 # Run all tests
@@ -233,26 +91,24 @@ mvn clean test
 
 # Run specific test
 mvn -Dtest=FlightBookingTest test
-Using Eclipse IDE
+Using Eclipse:
+
 Right-click on FlightBookingTest.java
 Select Run As → TestNG Test
-Using TestNG XML
-Right-click on testng.xml
-Select Run As → TestNG Suite
 🧪 Test Scenarios
 Test Flow (11 Steps)
-Step	Action	Description
-1	Navigate	Open BlazeDemo website
-2	Select Departure	Choose departure city
-3	Select Destination	Choose destination city
-4	Find Flights	Click Find Flights button
-5	Verify List	Confirm flights displayed
-6	Select Flight	Choose flight by strategy
-7	Verify Purchase	Confirm purchase page
-8	Personal Details	Enter passenger info
-9	Payment Details	Enter card info
-10	Purchase	Click Purchase button
-11	Confirm	Verify booking success
+Step	Action
+1	Navigate to BlazeDemo
+2	Select departure city
+3	Select destination city
+4	Click Find Flights
+5	Verify flight list
+6	Select flight
+7	Verify purchase page
+8	Enter personal details
+9	Enter payment details
+10	Click Purchase
+11	Verify confirmation
 Test Data (Excel)
 Departure	Destination	Passenger	Selection
 Paris	Buenos Aires	John Smith	1
@@ -266,193 +122,74 @@ Index	1, 2, 3, 4, 5	Select by position
 Random	RANDOM	Random selection
 Cheapest	CHEAPEST	Lowest price
 Expensive	EXPENSIVE	Highest price
-Sequential	SEQUENTIAL	Rotate through
-First	FIRST	Always first
-Named	SECOND, THIRD	By name
+📸 Screenshots
+Screenshots are automatically captured on test pass/fail.
+
+Location: screenshots/
+
+Event	Naming
+Pass	PASSED_1_testName_timestamp.png
+Fail	FAILED_1_testName_timestamp.png
 📊 Test Reports
-TestNG Report
-Location: test-output/index.html
+TestNG Report: test-output/index.html
 
 Bash
 
 start test-output/index.html
-Console Output Example
-text
-
-================================================================================
-TEST EXECUTION #1
-================================================================================
-Test Scenario:
-  Departure: Paris
-  Destination: Buenos Aires
-  Passenger: John Smith
-  Flight Selection Method: 1
---------------------------------------------------------------------------------
-
-STEP 1: Navigated to BlazeDemo
-STEP 2: Selected Departure City: Paris
-STEP 3: Selected Destination City: Buenos Aires
-STEP 4: Clicked 'Find Flights' button
-STEP 5: Flight list displayed (5 flights available)
-
-        --------------------------------------------------
-        | # | Airline            | Price     |
-        --------------------------------------------------
-        | 1 | Virgin America     | $472.56   |
-        | 2 | United Airlines    | $432.98   |
-        | 3 | Aer Lingus         | $200.98   |
-        | 4 | Virgin America     | $765.32   |
-        | 5 | Lufthansa          | $233.98   |
-        --------------------------------------------------
-
-STEP 6: Selected Flight #1
-STEP 7: Purchase page displayed
-STEP 8: Entered personal details
-STEP 9: Entered payment details
-STEP 10: Clicked 'Purchase Flight'
-STEP 11: Booking Confirmation Received
-
-        ==================================================
-        BOOKING CONFIRMATION DETAILS
-        ==================================================
-        Confirmation ID: 1773142719291
-        Status: PendingCapture
-        Total Amount: 555 USD
-        ==================================================
-
-================================================================================
-TEST #1 COMPLETED SUCCESSFULLY
-================================================================================
-📸 Screenshots
-Automatic Screenshot Capture
-Event	Naming	Location
-Pass	PASSED_1_testName_timestamp.png	screenshots/
-Fail	FAILED_1_testName_timestamp.png	screenshots/
-Example Files
-text
-
-screenshots/
-├── PASSED_1_testFlightBooking_20260310_165328.png
-├── PASSED_2_testFlightBooking_20260310_165333.png
-├── PASSED_3_testFlightBooking_20260310_165338.png
-├── PASSED_4_testFlightBooking_20260310_165344.png
-└── PASSED_5_testFlightBooking_20260310_165349.png
 🔄 Jenkins CI/CD
-Pipeline Stages
-text
-
-┌─────────────┐
-│  Checkout   │ ◄── Clone from GitHub
-└──────┬──────┘
-       │
-┌──────▼──────┐
-│    Clean    │ ◄── Clean workspace
-└──────┬──────┘
-       │
-┌──────▼──────┐
-│   Compile   │ ◄── Compile code
-└──────┬──────┘
-       │
-┌──────▼──────┐
-│Create Excel │ ◄── Generate test data
-└──────┬──────┘
-       │
-┌──────▼──────┐
-│  Run Tests  │ ◄── Execute tests
-└──────┬──────┘
-       │
-┌──────▼──────┐
-│   Publish   │ ◄── Archive results
-└─────────────┘
-Jenkins Setup
-Install Jenkins from https://jenkins.io
+Setup Steps
+Install Jenkins
 Install plugins: Maven, Git, TestNG Results
 Create Pipeline job
-Configure SCM: https://github.com/prashanth110203/FlightTicketAutomation.git
+Configure SCM with repository URL
 Set Script Path: Jenkinsfile
-Click Build Now
+Build Now
 Build Output
 text
 
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
 BUILD SUCCESS
-Total time: 42.68 s
-
 📁 Project Structure
-
+text
 
 FlightTicketAutomation/
-│
-├── src/
-│   ├── main/java/com/blazedemo/
-│   │   ├── config/
-│   │   │   └── TestConfig.java
-│   │   ├── pages/
-│   │   │   ├── HomePage.java
-│   │   │   ├── FlightListPage.java
-│   │   │   ├── PurchasePage.java
-│   │   │   └── ConfirmationPage.java
-│   │   └── utils/
-│   │       ├── DriverManager.java
-│   │       ├── ExcelReader.java
-│   │       ├── ExcelFileCreator.java
-│   │       ├── TestDataGenerator.java
-│   │       ├── ScreenshotUtil.java
-│   │       └── TestListener.java
-│   │
-│   └── test/java/com/blazedemo/
-│       └── tests/
-│           └── FlightBookingTest.java
-│
-├── test-data/
-│   └── flightdata.xlsx
-│
+├── src/main/java/com/blazedemo/
+│   ├── config/TestConfig.java
+│   ├── pages/
+│   │   ├── HomePage.java
+│   │   ├── FlightListPage.java
+│   │   ├── PurchasePage.java
+│   │   └── ConfirmationPage.java
+│   └── utils/
+│       ├── DriverManager.java
+│       ├── ExcelReader.java
+│       ├── ScreenshotUtil.java
+│       └── TestListener.java
+├── src/test/java/com/blazedemo/tests/
+│   └── FlightBookingTest.java
+├── test-data/flightdata.xlsx
 ├── screenshots/
-├── test-output/
 ├── pom.xml
 ├── testng.xml
-├── Jenkinsfile
-└── README.md
+└── Jenkinsfile
 📊 Test Statistics
 Metric	Value
 Total Tests	5
 Passed	5 (100%)
 Failed	0
-Skipped	0
 Execution Time	~42 seconds
-Screenshots	5 captured
-🐛 Troubleshooting
-Issue	Solution
-Excel not found	Run ExcelFileCreator
-ChromeDriver error	WebDriverManager handles it
-Tests not running	Check testng.xml
-Dependencies fail	Run mvn clean install -U
 🚀 Quick Start
 Bash
 
-# Clone
 git clone https://github.com/prashanth110203/FlightTicketAutomation.git
 cd FlightTicketAutomation
-
-# Install
 mvn clean install
-
-# Create test data
 mvn exec:java -Dexec.mainClass="com.blazedemo.utils.ExcelFileCreator"
-
-# Run tests
 mvn test
-
-# View report
-start test-output/index.html
-
 👨‍💻 Author
 Prashanth
-GitHub: @prashanth110203
-Project: FlightTicketAutomation
-📜 License
-This project is licensed under the MIT License.
 
+GitHub: @prashanth110203
 🙏 Acknowledgments
 Wipro - Training opportunity
 BlazeDemo - Test application
@@ -465,7 +202,4 @@ TestNG - Testing framework
 ✅ TestNG framework
 ✅ Maven project management
 ✅ CI/CD with Jenkins
-✅ Screenshot capture
-✅ Test reporting
-<p align="center"> <b>⭐ Star this repository if you found it helpful!</b> <br><br> Made with ❤️ by Prashanth <br> Wipro Pre-Skilling Program - Capstone Project </p> ```
----END---
+<p align="center"> <b>⭐ Star this repository if you found it helpful!</b> <br><br> Made with ❤️ by Prashanth <br> Wipro Pre-Skilling Program - Capstone Project </p>
