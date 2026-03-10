@@ -202,4 +202,4 @@ TestNG - Testing framework
 ✅ TestNG framework
 ✅ Maven project management
 ✅ CI/CD with Jenkins
-<p align="center"> <b>⭐ Star this repository if you found it helpful!</b> <br><br> Made with ❤️ by Prashanth <br> Wipro Pre-Skilling Program - Capstone Project </p>
+
