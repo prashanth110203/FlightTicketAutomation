@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-03-10T16:53:22 IST" name="Default suite" finished-at="2026-03-10T16:53:49 IST" duration-ms="27215">
+    <groups>
+    </groups>
+    <test started-at="2026-03-10T16:53:22 IST" name="Default test" finished-at="2026-03-10T16:53:49 IST" duration-ms="27215">
+      <class name="com.blazedemo.tests.FlightBookingTest">
+        <test-method is-config="true" signature="setupSuite()[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3]" started-at="2026-03-10T16:53:21 IST" name="setupSuite" finished-at="2026-03-10T16:53:22 IST" duration-ms="456" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSuite -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3]" started-at="2026-03-10T16:53:22 IST" name="setup" finished-at="2026-03-10T16:53:23 IST" duration-ms="1251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testFlightBooking(java.util.Map)[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3]" started-at="2026-03-10T16:53:23 IST" name="testFlightBooking" description="End-to-End Flight Booking Test" data-provider="flightData" finished-at="2026-03-10T16:53:28 IST" duration-ms="4501" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{DestinationCity=Buenos Aires, FlightSelection=1, PassengerName=John Smith, DepartureCity=Paris}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFlightBooking -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3]" started-at="2026-03-10T16:53:28 IST" name="teardown" finished-at="2026-03-10T16:53:28 IST" duration-ms="204" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testFlightBooking status=SUCCESS method=FlightBookingTest.testFlightBooking(java.util.Map)[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3]" started-at="2026-03-10T16:53:28 IST" name="setup" finished-at="2026-03-10T16:53:29 IST" duration-ms="715" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testFlightBooking(java.util.Map)[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3]" started-at="2026-03-10T16:53:29 IST" name="testFlightBooking" description="End-to-End Flight Booking Test" data-provider="flightData" finished-at="2026-03-10T16:53:33 IST" duration-ms="4542" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{DestinationCity=London, FlightSelection=CHEAPEST, PassengerName=Jane Doe, DepartureCity=Boston}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFlightBooking -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3]" started-at="2026-03-10T16:53:33 IST" name="teardown" finished-at="2026-03-10T16:53:34 IST" duration-ms="175" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testFlightBooking status=SUCCESS method=FlightBookingTest.testFlightBooking(java.util.Map)[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3]" started-at="2026-03-10T16:53:34 IST" name="setup" finished-at="2026-03-10T16:53:34 IST" duration-ms="700" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testFlightBooking(java.util.Map)[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3]" started-at="2026-03-10T16:53:34 IST" name="testFlightBooking" description="End-to-End Flight Booking Test" data-provider="flightData" finished-at="2026-03-10T16:53:38 IST" duration-ms="4027" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{DestinationCity=Dublin, FlightSelection=RANDOM, PassengerName=Michael Johnson, DepartureCity=Portland}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFlightBooking -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3]" started-at="2026-03-10T16:53:38 IST" name="teardown" finished-at="2026-03-10T16:53:39 IST" duration-ms="183" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testFlightBooking status=SUCCESS method=FlightBookingTest.testFlightBooking(java.util.Map)[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3]" started-at="2026-03-10T16:53:39 IST" name="setup" finished-at="2026-03-10T16:53:39 IST" duration-ms="702" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testFlightBooking(java.util.Map)[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3]" started-at="2026-03-10T16:53:39 IST" name="testFlightBooking" description="End-to-End Flight Booking Test" data-provider="flightData" finished-at="2026-03-10T16:53:44 IST" duration-ms="4300" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{DestinationCity=Rome, FlightSelection=3, PassengerName=Sarah Williams, DepartureCity=Philadelphia}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFlightBooking -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3]" started-at="2026-03-10T16:53:44 IST" name="teardown" finished-at="2026-03-10T16:53:44 IST" duration-ms="143" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testFlightBooking status=SUCCESS method=FlightBookingTest.testFlightBooking(java.util.Map)[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3]" started-at="2026-03-10T16:53:44 IST" name="setup" finished-at="2026-03-10T16:53:45 IST" duration-ms="635" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testFlightBooking(java.util.Map)[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3]" started-at="2026-03-10T16:53:45 IST" name="testFlightBooking" description="End-to-End Flight Booking Test" data-provider="flightData" finished-at="2026-03-10T16:53:49 IST" duration-ms="4081" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{DestinationCity=Cairo, FlightSelection=4, PassengerName=David Brown, DepartureCity=San Diego}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFlightBooking -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3]" started-at="2026-03-10T16:53:49 IST" name="teardown" finished-at="2026-03-10T16:53:49 IST" duration-ms="184" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testFlightBooking status=SUCCESS method=FlightBookingTest.testFlightBooking(java.util.Map)[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="teardownSuite()[pri:0, instance:com.blazedemo.tests.FlightBookingTest@479d31f3]" started-at="2026-03-10T16:53:49 IST" name="teardownSuite" finished-at="2026-03-10T16:53:49 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardownSuite -->
+      </class> <!-- com.blazedemo.tests.FlightBookingTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="BlazeDemo Flight Booking Suite" verbose="1">
+    
+    <listeners>
+        <listener class-name="com.blazedemo.utils.TestListener"/>
+    </listeners>
+    
+    <test name="Flight Booking End-to-End Tests" preserve-order="true">
+        <classes>
+            <class name="com.blazedemo.tests.FlightBookingTest">
+                <methods>
+                    <include name="testFlightBooking"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
