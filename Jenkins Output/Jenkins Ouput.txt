@@ -1,0 +1,678 @@
+Started by user Prashanth
+Obtained Jenkinsfile from git https://github.com/prashanth110203/FlightTicketAutomation.git
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\FightTicketAutomation
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential eb4904b5-6055-485e-b423-3000f83d2e63
+ > C:\Program Files\Git\bin\git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\FightTicketAutomation\.git # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/prashanth110203/FlightTicketAutomation.git # timeout=10
+Fetching upstream changes from https://github.com/prashanth110203/FlightTicketAutomation.git
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+ > git --version # 'git version 2.53.0.windows.1'
+using GIT_ASKPASS to set credentials 
+ > C:\Program Files\Git\bin\git.exe fetch --tags --force --progress -- https://github.com/prashanth110203/FlightTicketAutomation.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision 9c8d5ac4dee04675b747a1cd03d12de3428a9ade (refs/remotes/origin/main)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f 9c8d5ac4dee04675b747a1cd03d12de3428a9ade # timeout=10
+Commit message: "Update Jenkinsfile"
+ > C:\Program Files\Git\bin\git.exe rev-list --no-walk 9c8d5ac4dee04675b747a1cd03d12de3428a9ade # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] timeout
+[2026-03-10T11:44:33.254Z] Timeout set to expire in 30 min
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Tool Install)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] echo
+[2026-03-10T11:44:34.115Z] Checking out code from repository...
+[Pipeline] checkout
+[2026-03-10T11:44:34.135Z] Selected Git installation does not exist. Using Default
+[2026-03-10T11:44:34.135Z] The recommended git tool is: NONE
+[2026-03-10T11:44:34.135Z] using credential eb4904b5-6055-485e-b423-3000f83d2e63
+[2026-03-10T11:44:34.144Z]  > C:\Program Files\Git\bin\git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\FightTicketAutomation\.git # timeout=10
+[2026-03-10T11:44:34.194Z] Fetching changes from the remote Git repository
+[2026-03-10T11:44:34.215Z]  > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/prashanth110203/FlightTicketAutomation.git # timeout=10
+[2026-03-10T11:44:34.272Z] Fetching upstream changes from https://github.com/prashanth110203/FlightTicketAutomation.git
+[2026-03-10T11:44:34.272Z]  > C:\Program Files\Git\bin\git.exe --version # timeout=10
+[2026-03-10T11:44:34.318Z]  > git --version # 'git version 2.53.0.windows.1'
+[2026-03-10T11:44:34.318Z] using GIT_ASKPASS to set credentials 
+[2026-03-10T11:44:34.325Z]  > C:\Program Files\Git\bin\git.exe fetch --tags --force --progress -- https://github.com/prashanth110203/FlightTicketAutomation.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+[2026-03-10T11:44:34.991Z]  > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+[2026-03-10T11:44:35.054Z] Checking out Revision 9c8d5ac4dee04675b747a1cd03d12de3428a9ade (refs/remotes/origin/main)
+[2026-03-10T11:44:35.054Z]  > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+[2026-03-10T11:44:35.114Z]  > C:\Program Files\Git\bin\git.exe checkout -f 9c8d5ac4dee04675b747a1cd03d12de3428a9ade # timeout=10
+[2026-03-10T11:44:35.205Z] Commit message: "Update Jenkinsfile"
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Clean)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] echo
+[2026-03-10T11:44:35.698Z] Cleaning previous builds...
+[Pipeline] bat
+[2026-03-10T11:44:36.001Z] 
+[2026-03-10T11:44:36.001Z] C:\ProgramData\Jenkins\.jenkins\workspace\FightTicketAutomation>mvn clean 
+[2026-03-10T11:44:37.351Z] [INFO] Scanning for projects...
+[2026-03-10T11:44:37.351Z] [INFO] 
+[2026-03-10T11:44:37.351Z] [INFO] -------------------< com.prashanth:FlightAutomation >-------------------
+[2026-03-10T11:44:37.351Z] [INFO] Building BlazeDemo Flight Booking Automation 1.0-SNAPSHOT
+[2026-03-10T11:44:37.351Z] [INFO]   from pom.xml
+[2026-03-10T11:44:37.351Z] [INFO] --------------------------------[ jar ]---------------------------------
+[2026-03-10T11:44:37.351Z] [INFO] 
+[2026-03-10T11:44:37.351Z] [INFO] --- clean:3.2.0:clean (default-clean) @ FlightAutomation ---
+[2026-03-10T11:44:37.351Z] [INFO] Deleting C:\ProgramData\Jenkins\.jenkins\workspace\FightTicketAutomation\target
+[2026-03-10T11:44:37.351Z] [INFO] ------------------------------------------------------------------------
+[2026-03-10T11:44:37.351Z] [INFO] BUILD SUCCESS
+[2026-03-10T11:44:37.351Z] [INFO] ------------------------------------------------------------------------
+[2026-03-10T11:44:37.351Z] [INFO] Total time:  0.289 s
+[2026-03-10T11:44:37.351Z] [INFO] Finished at: 2026-03-10T17:14:37+05:30
+[2026-03-10T11:44:37.351Z] [INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Compile)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] echo
+[2026-03-10T11:44:38.146Z] Compiling source code...
+[Pipeline] bat
+[2026-03-10T11:44:38.445Z] 
+[2026-03-10T11:44:38.446Z] C:\ProgramData\Jenkins\.jenkins\workspace\FightTicketAutomation>mvn compile 
+[2026-03-10T11:44:39.797Z] [INFO] Scanning for projects...
+[2026-03-10T11:44:39.797Z] [INFO] 
+[2026-03-10T11:44:39.797Z] [INFO] -------------------< com.prashanth:FlightAutomation >-------------------
+[2026-03-10T11:44:39.797Z] [INFO] Building BlazeDemo Flight Booking Automation 1.0-SNAPSHOT
+[2026-03-10T11:44:39.797Z] [INFO]   from pom.xml
+[2026-03-10T11:44:39.797Z] [INFO] --------------------------------[ jar ]---------------------------------
+[2026-03-10T11:44:40.351Z] [INFO] 
+[2026-03-10T11:44:40.351Z] [INFO] --- resources:3.3.1:resources (default-resources) @ FlightAutomation ---
+[2026-03-10T11:44:40.606Z] [INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\FightTicketAutomation\src\main\resources
+[2026-03-10T11:44:40.606Z] [INFO] 
+[2026-03-10T11:44:40.606Z] [INFO] --- compiler:3.11.0:compile (default-compile) @ FlightAutomation ---
+[2026-03-10T11:44:40.606Z] [INFO] Changes detected - recompiling the module! :source
+[2026-03-10T11:44:40.606Z] [INFO] Compiling 10 source files with javac [debug target 11] to target\classes
+[2026-03-10T11:44:41.955Z] [WARNING] location of system modules is not set in conjunction with -source 11
+[2026-03-10T11:44:41.955Z]   not setting the location of system modules may lead to class files that cannot run on JDK 11
+[2026-03-10T11:44:41.955Z]     --release 11 is recommended instead of -source 11 -target 11 because it sets the location of system modules automatically
+[2026-03-10T11:44:41.955Z] [INFO] ------------------------------------------------------------------------
+[2026-03-10T11:44:41.955Z] [INFO] BUILD SUCCESS
+[2026-03-10T11:44:41.955Z] [INFO] ------------------------------------------------------------------------
+[2026-03-10T11:44:41.955Z] [INFO] Total time:  2.278 s
+[2026-03-10T11:44:41.955Z] [INFO] Finished at: 2026-03-10T17:14:41+05:30
+[2026-03-10T11:44:41.955Z] [INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Create Excel File)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] echo
+[2026-03-10T11:44:42.388Z] Creating test data Excel file...
+[Pipeline] bat
+[2026-03-10T11:44:42.680Z] 
+[2026-03-10T11:44:42.680Z] C:\ProgramData\Jenkins\.jenkins\workspace\FightTicketAutomation>mvn exec:java -Dexec.mainClass="com.blazedemo.utils.ExcelFileCreator" 
+[2026-03-10T11:44:44.031Z] [INFO] Scanning for projects...
+[2026-03-10T11:44:44.031Z] [INFO] 
+[2026-03-10T11:44:44.031Z] [INFO] -------------------< com.prashanth:FlightAutomation >-------------------
+[2026-03-10T11:44:44.031Z] [INFO] Building BlazeDemo Flight Booking Automation 1.0-SNAPSHOT
+[2026-03-10T11:44:44.031Z] [INFO]   from pom.xml
+[2026-03-10T11:44:44.031Z] [INFO] --------------------------------[ jar ]---------------------------------
+[2026-03-10T11:44:44.586Z] [INFO] 
+[2026-03-10T11:44:44.586Z] [INFO] --- exec:3.6.3:java (default-cli) @ FlightAutomation ---
+[2026-03-10T11:44:44.840Z] ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+[2026-03-10T11:44:45.755Z] ================================================================================
+[2026-03-10T11:44:45.755Z] SUCCESS: Excel file created!
+[2026-03-10T11:44:45.755Z] Location: C:\ProgramData\Jenkins\.jenkins\workspace\FightTicketAutomation\test-data\flightdata.xlsx
+[2026-03-10T11:44:45.755Z] Sheet Name: BookingData
+[2026-03-10T11:44:45.755Z] Total records: 5
+[2026-03-10T11:44:45.755Z] ================================================================================
+[2026-03-10T11:44:45.755Z] 
+[2026-03-10T11:44:45.755Z] Flight Selection Options:
+[2026-03-10T11:44:45.755Z]   1-5      : Select specific flight number
+[2026-03-10T11:44:45.755Z]   RANDOM   : Select random flight
+[2026-03-10T11:44:45.755Z]   CHEAPEST : Select lowest price
+[2026-03-10T11:44:45.755Z]   EXPENSIVE: Select highest price
+[2026-03-10T11:44:45.755Z] ================================================================================
+[2026-03-10T11:44:45.755Z] [INFO] ------------------------------------------------------------------------
+[2026-03-10T11:44:45.755Z] [INFO] BUILD SUCCESS
+[2026-03-10T11:44:45.755Z] [INFO] ------------------------------------------------------------------------
+[2026-03-10T11:44:45.755Z] [INFO] Total time:  1.884 s
+[2026-03-10T11:44:45.755Z] [INFO] Finished at: 2026-03-10T17:14:45+05:30
+[2026-03-10T11:44:45.755Z] [INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run Tests)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] echo
+[2026-03-10T11:44:46.184Z] Running flight booking automation tests...
+[Pipeline] bat
+[2026-03-10T11:44:46.478Z] 
+[2026-03-10T11:44:46.478Z] C:\ProgramData\Jenkins\.jenkins\workspace\FightTicketAutomation>mvn test 
+[2026-03-10T11:44:47.830Z] [INFO] Scanning for projects...
+[2026-03-10T11:44:47.830Z] [INFO] 
+[2026-03-10T11:44:47.830Z] [INFO] -------------------< com.prashanth:FlightAutomation >-------------------
+[2026-03-10T11:44:47.830Z] [INFO] Building BlazeDemo Flight Booking Automation 1.0-SNAPSHOT
+[2026-03-10T11:44:47.830Z] [INFO]   from pom.xml
+[2026-03-10T11:44:47.830Z] [INFO] --------------------------------[ jar ]---------------------------------
+[2026-03-10T11:44:48.082Z] [INFO] 
+[2026-03-10T11:44:48.082Z] [INFO] --- resources:3.3.1:resources (default-resources) @ FlightAutomation ---
+[2026-03-10T11:44:48.082Z] [INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\FightTicketAutomation\src\main\resources
+[2026-03-10T11:44:48.082Z] [INFO] 
+[2026-03-10T11:44:48.082Z] [INFO] --- compiler:3.11.0:compile (default-compile) @ FlightAutomation ---
+[2026-03-10T11:44:48.334Z] [INFO] Nothing to compile - all classes are up to date
+[2026-03-10T11:44:48.334Z] [INFO] 
+[2026-03-10T11:44:48.334Z] [INFO] --- resources:3.3.1:testResources (default-testResources) @ FlightAutomation ---
+[2026-03-10T11:44:48.334Z] [INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\FightTicketAutomation\src\test\resources
+[2026-03-10T11:44:48.334Z] [INFO] 
+[2026-03-10T11:44:48.334Z] [INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ FlightAutomation ---
+[2026-03-10T11:44:48.334Z] [INFO] Changes detected - recompiling the module! :source
+[2026-03-10T11:44:48.334Z] [INFO] Compiling 2 source files with javac [debug target 11] to target\test-classes
+[2026-03-10T11:44:49.251Z] [WARNING] location of system modules is not set in conjunction with -source 11
+[2026-03-10T11:44:49.251Z]   not setting the location of system modules may lead to class files that cannot run on JDK 11
+[2026-03-10T11:44:49.251Z]     --release 11 is recommended instead of -source 11 -target 11 because it sets the location of system modules automatically
+[2026-03-10T11:44:49.251Z] [INFO] 
+[2026-03-10T11:44:49.251Z] [INFO] --- surefire:3.0.0:test (default-test) @ FlightAutomation ---
+[2026-03-10T11:44:49.251Z] [INFO] Using auto detected provider org.apache.maven.surefire.testng.TestNGProvider
+[2026-03-10T11:44:49.504Z] [INFO] 
+[2026-03-10T11:44:49.504Z] [INFO] -------------------------------------------------------
+[2026-03-10T11:44:49.504Z] [INFO]  T E S T S
+[2026-03-10T11:44:49.504Z] [INFO] -------------------------------------------------------
+[2026-03-10T11:44:49.755Z] [INFO] Running TestSuite
+[2026-03-10T11:44:49.755Z] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+[2026-03-10T11:44:49.755Z] SLF4J: Defaulting to no-operation (NOP) logger implementation
+[2026-03-10T11:44:49.755Z] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[2026-03-10T11:44:50.310Z] 
+[2026-03-10T11:44:50.310Z] ================================================================================
+[2026-03-10T11:44:50.310Z] BLAZEDEMO FLIGHT BOOKING AUTOMATION PROJECT
+[2026-03-10T11:44:50.310Z] Wipro Training - Capstone Project
+[2026-03-10T11:44:50.310Z] ================================================================================
+[2026-03-10T11:44:50.310Z] ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+[2026-03-10T11:44:50.563Z] Excel loaded successfully: test-data/flightdata.xlsx
+[2026-03-10T11:44:50.563Z] 
+[2026-03-10T11:44:50.563Z] ================================================================================
+[2026-03-10T11:44:50.563Z] TEST SUITE STARTED: Flight Booking End-to-End Tests
+[2026-03-10T11:44:50.563Z] ================================================================================
+[2026-03-10T11:44:50.563Z] 
+[2026-03-10T11:44:50.563Z] Loaded 5 test records from Excel
+[2026-03-10T11:44:51.912Z] Mar 10, 2026 5:14:51 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+[2026-03-10T11:44:51.912Z] WARNING: Unable to find CDP implementation matching 145
+[2026-03-10T11:44:51.912Z] Mar 10, 2026 5:14:51 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+[2026-03-10T11:44:51.912Z] WARNING: Unable to find version of CDP to use for 145.0.7632.160. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[2026-03-10T11:44:51.912Z] Chrome Browser initialized successfully
+[2026-03-10T11:44:51.912Z] 
+[2026-03-10T11:44:51.912Z] --------------------------------------------------------------------------------
+[2026-03-10T11:44:51.912Z] STARTING: testFlightBooking
+[2026-03-10T11:44:51.912Z] --------------------------------------------------------------------------------
+[2026-03-10T11:44:51.912Z] 
+[2026-03-10T11:44:51.912Z] ================================================================================
+[2026-03-10T11:44:51.912Z] TEST EXECUTION #1
+[2026-03-10T11:44:51.912Z] ================================================================================
+[2026-03-10T11:44:51.912Z] 
+[2026-03-10T11:44:51.912Z] Test Scenario:
+[2026-03-10T11:44:51.912Z]   Departure: Paris
+[2026-03-10T11:44:51.912Z]   Destination: Buenos Aires
+[2026-03-10T11:44:51.912Z]   Passenger: John Smith
+[2026-03-10T11:44:51.912Z]   Flight Selection Method: 1
+[2026-03-10T11:44:51.912Z] 
+[2026-03-10T11:44:51.912Z] --------------------------------------------------------------------------------
+[2026-03-10T11:44:51.912Z] 
+[2026-03-10T11:44:53.269Z] STEP 1: Navigated to BlazeDemo
+[2026-03-10T11:44:53.269Z] STEP 2: Selected Departure City: Paris
+[2026-03-10T11:44:53.269Z] STEP 3: Selected Destination City: Buenos Aires
+[2026-03-10T11:44:53.823Z] STEP 4: Clicked 'Find Flights' button
+[2026-03-10T11:44:53.823Z] STEP 5: Flight list displayed (5 flights available)
+[2026-03-10T11:44:53.823Z] 
+[2026-03-10T11:44:53.823Z]         --------------------------------------------------
+[2026-03-10T11:44:53.823Z]         | # | Airline            | Price     |
+[2026-03-10T11:44:53.824Z]         --------------------------------------------------
+[2026-03-10T11:44:54.078Z]         | 1 | Virgin America     | $472.56   |
+[2026-03-10T11:44:54.078Z]         | 2 | United Airlines    | $432.98   |
+[2026-03-10T11:44:54.078Z]         | 3 | Aer Lingus         | $200.98   |
+[2026-03-10T11:44:54.078Z]         | 4 | Virgin America     | $765.32   |
+[2026-03-10T11:44:54.331Z]         | 5 | Lufthansa          | $233.98   |
+[2026-03-10T11:44:54.331Z]         --------------------------------------------------
+[2026-03-10T11:44:54.331Z] 
+[2026-03-10T11:44:55.249Z] STEP 6: Selected Flight #1
+[2026-03-10T11:44:55.249Z]         Airline: Virgin America | Price: $472.56
+[2026-03-10T11:44:55.249Z] STEP 7: Purchase page displayed with flight details
+[2026-03-10T11:44:55.806Z] STEP 8: Entered personal details
+[2026-03-10T11:44:55.806Z]         Name: John Smith
+[2026-03-10T11:44:55.806Z]         Address: 356 Main Street, Los Angeles, CA 02410
+[2026-03-10T11:44:56.723Z] STEP 9: Entered payment details
+[2026-03-10T11:44:56.723Z]         Card: ****-****-****-9012
+[2026-03-10T11:44:56.723Z]         Expiry: 09/2028
+[2026-03-10T11:44:56.976Z] STEP 10: Clicked 'Purchase Flight' button
+[2026-03-10T11:44:57.229Z] STEP 11: Booking Confirmation Received
+[2026-03-10T11:44:57.229Z]         Message: Thank you for your purchase today!
+[2026-03-10T11:44:57.229Z] 
+[2026-03-10T11:44:57.229Z]         ==================================================
+[2026-03-10T11:44:57.229Z]         BOOKING CONFIRMATION DETAILS
+[2026-03-10T11:44:57.229Z]         ==================================================
+[2026-03-10T11:44:57.229Z]         Confirmation ID: 1773143103882
+[2026-03-10T11:44:57.229Z]         Status: PendingCapture
+[2026-03-10T11:44:57.229Z]         Total Amount: 555 USD
+[2026-03-10T11:44:57.229Z]         ==================================================
+[2026-03-10T11:44:57.229Z] 
+[2026-03-10T11:44:57.229Z] ================================================================================
+[2026-03-10T11:44:57.229Z] TEST #1 COMPLETED SUCCESSFULLY
+[2026-03-10T11:44:57.229Z] Flight booked: Paris -> Buenos Aires for John Smith
+[2026-03-10T11:44:57.229Z] ================================================================================
+[2026-03-10T11:44:57.229Z] 
+[2026-03-10T11:44:57.229Z] 
+[2026-03-10T11:44:57.229Z] --------------------------------------------------------------------------------
+[2026-03-10T11:44:57.229Z] ? PASSED: testFlightBooking (Duration: 5s)
+[2026-03-10T11:44:57.229Z] 
+[2026-03-10T11:44:57.229Z] ? TEST PASSED - Capturing Screenshot...
+[2026-03-10T11:44:57.229Z] ? Screenshot saved: C:\ProgramData\Jenkins\.jenkins\workspace\FightTicketAutomation\screenshots\PASSED_1_testFlightBooking_20260310_171457.png
+[2026-03-10T11:44:57.229Z] ? Screenshot Location: screenshots\PASSED_1_testFlightBooking_20260310_171457.png
+[2026-03-10T11:44:57.229Z] --------------------------------------------------------------------------------
+[2026-03-10T11:44:57.229Z] 
+[2026-03-10T11:44:57.782Z] Browser closed successfully
+[2026-03-10T11:44:58.335Z] Mar 10, 2026 5:14:58 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+[2026-03-10T11:44:58.335Z] WARNING: Unable to find CDP implementation matching 145
+[2026-03-10T11:44:58.335Z] Mar 10, 2026 5:14:58 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+[2026-03-10T11:44:58.335Z] WARNING: Unable to find version of CDP to use for 145.0.7632.160. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[2026-03-10T11:44:58.335Z] Chrome Browser initialized successfully
+[2026-03-10T11:44:58.335Z] 
+[2026-03-10T11:44:58.335Z] --------------------------------------------------------------------------------
+[2026-03-10T11:44:58.335Z] STARTING: testFlightBooking
+[2026-03-10T11:44:58.335Z] --------------------------------------------------------------------------------
+[2026-03-10T11:44:58.335Z] 
+[2026-03-10T11:44:58.335Z] ================================================================================
+[2026-03-10T11:44:58.335Z] TEST EXECUTION #2
+[2026-03-10T11:44:58.335Z] ================================================================================
+[2026-03-10T11:44:58.335Z] 
+[2026-03-10T11:44:58.335Z] Test Scenario:
+[2026-03-10T11:44:58.335Z]   Departure: Boston
+[2026-03-10T11:44:58.335Z]   Destination: London
+[2026-03-10T11:44:58.335Z]   Passenger: Jane Doe
+[2026-03-10T11:44:58.335Z]   Flight Selection Method: 2
+[2026-03-10T11:44:58.335Z] 
+[2026-03-10T11:44:58.335Z] --------------------------------------------------------------------------------
+[2026-03-10T11:44:58.335Z] 
+[2026-03-10T11:44:59.252Z] STEP 1: Navigated to BlazeDemo
+[2026-03-10T11:44:59.506Z] STEP 2: Selected Departure City: Boston
+[2026-03-10T11:44:59.759Z] STEP 3: Selected Destination City: London
+[2026-03-10T11:45:00.313Z] STEP 4: Clicked 'Find Flights' button
+[2026-03-10T11:45:00.313Z] STEP 5: Flight list displayed (5 flights available)
+[2026-03-10T11:45:00.313Z] 
+[2026-03-10T11:45:00.313Z]         --------------------------------------------------
+[2026-03-10T11:45:00.313Z]         | # | Airline            | Price     |
+[2026-03-10T11:45:00.313Z]         --------------------------------------------------
+[2026-03-10T11:45:00.313Z]         | 1 | Virgin America     | $472.56   |
+[2026-03-10T11:45:00.583Z]         | 2 | United Airlines    | $432.98   |
+[2026-03-10T11:45:00.583Z]         | 3 | Aer Lingus         | $200.98   |
+[2026-03-10T11:45:00.583Z]         | 4 | Virgin America     | $765.32   |
+[2026-03-10T11:45:00.583Z]         | 5 | Lufthansa          | $233.98   |
+[2026-03-10T11:45:00.583Z]         --------------------------------------------------
+[2026-03-10T11:45:00.583Z] 
+[2026-03-10T11:45:01.500Z] STEP 6: Selected Flight #2
+[2026-03-10T11:45:01.500Z]         Airline: United Airlines | Price: $432.98
+[2026-03-10T11:45:01.500Z] STEP 7: Purchase page displayed with flight details
+[2026-03-10T11:45:02.417Z] STEP 8: Entered personal details
+[2026-03-10T11:45:02.417Z]         Name: Jane Doe
+[2026-03-10T11:45:02.417Z]         Address: 7949 Main Street, New York, CA 60134
+[2026-03-10T11:45:02.671Z] STEP 9: Entered payment details
+[2026-03-10T11:45:02.672Z]         Card: ****-****-****-9012
+[2026-03-10T11:45:02.672Z]         Expiry: 09/2028
+[2026-03-10T11:45:03.228Z] STEP 10: Clicked 'Purchase Flight' button
+[2026-03-10T11:45:03.481Z] STEP 11: Booking Confirmation Received
+[2026-03-10T11:45:03.481Z]         Message: Thank you for your purchase today!
+[2026-03-10T11:45:03.481Z] 
+[2026-03-10T11:45:03.481Z]         ==================================================
+[2026-03-10T11:45:03.481Z]         BOOKING CONFIRMATION DETAILS
+[2026-03-10T11:45:03.481Z]         ==================================================
+[2026-03-10T11:45:03.481Z]         Confirmation ID: 1773143109522
+[2026-03-10T11:45:03.481Z]         Status: PendingCapture
+[2026-03-10T11:45:03.481Z]         Total Amount: 555 USD
+[2026-03-10T11:45:03.481Z]         ==================================================
+[2026-03-10T11:45:03.481Z] 
+[2026-03-10T11:45:03.481Z] ================================================================================
+[2026-03-10T11:45:03.481Z] TEST #2 COMPLETED SUCCESSFULLY
+[2026-03-10T11:45:03.481Z] Flight booked: Boston -> London for Jane Doe
+[2026-03-10T11:45:03.481Z] ================================================================================
+[2026-03-10T11:45:03.481Z] 
+[2026-03-10T11:45:03.481Z] 
+[2026-03-10T11:45:03.481Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:03.481Z] ? PASSED: testFlightBooking (Duration: 5s)
+[2026-03-10T11:45:03.481Z] 
+[2026-03-10T11:45:03.481Z] ? TEST PASSED - Capturing Screenshot...
+[2026-03-10T11:45:03.481Z] ? Screenshot saved: C:\ProgramData\Jenkins\.jenkins\workspace\FightTicketAutomation\screenshots\PASSED_2_testFlightBooking_20260310_171503.png
+[2026-03-10T11:45:03.481Z] ? Screenshot Location: screenshots\PASSED_2_testFlightBooking_20260310_171503.png
+[2026-03-10T11:45:03.481Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:03.481Z] 
+[2026-03-10T11:45:04.033Z] Browser closed successfully
+[2026-03-10T11:45:04.588Z] Mar 10, 2026 5:15:04 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+[2026-03-10T11:45:04.588Z] WARNING: Unable to find CDP implementation matching 145
+[2026-03-10T11:45:04.588Z] Mar 10, 2026 5:15:04 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+[2026-03-10T11:45:04.588Z] WARNING: Unable to find version of CDP to use for 145.0.7632.160. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[2026-03-10T11:45:04.588Z] Chrome Browser initialized successfully
+[2026-03-10T11:45:04.588Z] 
+[2026-03-10T11:45:04.588Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:04.588Z] STARTING: testFlightBooking
+[2026-03-10T11:45:04.588Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:04.588Z] 
+[2026-03-10T11:45:04.588Z] ================================================================================
+[2026-03-10T11:45:04.588Z] TEST EXECUTION #3
+[2026-03-10T11:45:04.588Z] ================================================================================
+[2026-03-10T11:45:04.588Z] 
+[2026-03-10T11:45:04.588Z] Test Scenario:
+[2026-03-10T11:45:04.588Z]   Departure: Portland
+[2026-03-10T11:45:04.588Z]   Destination: Dublin
+[2026-03-10T11:45:04.588Z]   Passenger: Michael Johnson
+[2026-03-10T11:45:04.588Z]   Flight Selection Method: RANDOM
+[2026-03-10T11:45:04.588Z] 
+[2026-03-10T11:45:04.588Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:04.588Z] 
+[2026-03-10T11:45:05.504Z] STEP 1: Navigated to BlazeDemo
+[2026-03-10T11:45:05.504Z] STEP 2: Selected Departure City: Portland
+[2026-03-10T11:45:05.759Z] STEP 3: Selected Destination City: Dublin
+[2026-03-10T11:45:06.315Z] STEP 4: Clicked 'Find Flights' button
+[2026-03-10T11:45:06.315Z] STEP 5: Flight list displayed (5 flights available)
+[2026-03-10T11:45:06.315Z] 
+[2026-03-10T11:45:06.315Z]         --------------------------------------------------
+[2026-03-10T11:45:06.315Z]         | # | Airline            | Price     |
+[2026-03-10T11:45:06.315Z]         --------------------------------------------------
+[2026-03-10T11:45:06.315Z]         | 1 | Virgin America     | $472.56   |
+[2026-03-10T11:45:06.315Z]         | 2 | United Airlines    | $432.98   |
+[2026-03-10T11:45:06.568Z]         | 3 | Aer Lingus         | $200.98   |
+[2026-03-10T11:45:06.568Z]         | 4 | Virgin America     | $765.32   |
+[2026-03-10T11:45:06.568Z]         | 5 | Lufthansa          | $233.98   |
+[2026-03-10T11:45:06.568Z]         --------------------------------------------------
+[2026-03-10T11:45:06.568Z] 
+[2026-03-10T11:45:07.122Z] STEP 6: Selected RANDOM Flight #1 of 5
+[2026-03-10T11:45:07.122Z]         Airline: Virgin America | Price: $472.56
+[2026-03-10T11:45:07.122Z] STEP 7: Purchase page displayed with flight details
+[2026-03-10T11:45:08.036Z] STEP 8: Entered personal details
+[2026-03-10T11:45:08.036Z]         Name: Michael Johnson
+[2026-03-10T11:45:08.036Z]         Address: 9300 Main Street, Houston, NY 64945
+[2026-03-10T11:45:08.594Z] STEP 9: Entered payment details
+[2026-03-10T11:45:08.594Z]         Card: ****-****-****-9012
+[2026-03-10T11:45:08.594Z]         Expiry: 12/2026
+[2026-03-10T11:45:08.849Z] STEP 10: Clicked 'Purchase Flight' button
+[2026-03-10T11:45:09.101Z] STEP 11: Booking Confirmation Received
+[2026-03-10T11:45:09.101Z]         Message: Thank you for your purchase today!
+[2026-03-10T11:45:09.101Z] 
+[2026-03-10T11:45:09.101Z]         ==================================================
+[2026-03-10T11:45:09.101Z]         BOOKING CONFIRMATION DETAILS
+[2026-03-10T11:45:09.101Z]         ==================================================
+[2026-03-10T11:45:09.101Z]         Confirmation ID: 1773143115385
+[2026-03-10T11:45:09.101Z]         Status: PendingCapture
+[2026-03-10T11:45:09.101Z]         Total Amount: 555 USD
+[2026-03-10T11:45:09.101Z]         ==================================================
+[2026-03-10T11:45:09.101Z] 
+[2026-03-10T11:45:09.101Z] ================================================================================
+[2026-03-10T11:45:09.101Z] TEST #3 COMPLETED SUCCESSFULLY
+[2026-03-10T11:45:09.101Z] Flight booked: Portland -> Dublin for Michael Johnson
+[2026-03-10T11:45:09.101Z] ================================================================================
+[2026-03-10T11:45:09.101Z] 
+[2026-03-10T11:45:09.101Z] 
+[2026-03-10T11:45:09.101Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:09.101Z] ? PASSED: testFlightBooking (Duration: 4s)
+[2026-03-10T11:45:09.101Z] 
+[2026-03-10T11:45:09.101Z] ? TEST PASSED - Capturing Screenshot...
+[2026-03-10T11:45:09.352Z] ? Screenshot saved: C:\ProgramData\Jenkins\.jenkins\workspace\FightTicketAutomation\screenshots\PASSED_3_testFlightBooking_20260310_171509.png
+[2026-03-10T11:45:09.352Z] ? Screenshot Location: screenshots\PASSED_3_testFlightBooking_20260310_171509.png
+[2026-03-10T11:45:09.352Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:09.352Z] 
+[2026-03-10T11:45:09.606Z] Browser closed successfully
+[2026-03-10T11:45:10.161Z] Mar 10, 2026 5:15:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+[2026-03-10T11:45:10.161Z] WARNING: Unable to find CDP implementation matching 145
+[2026-03-10T11:45:10.161Z] Mar 10, 2026 5:15:10 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+[2026-03-10T11:45:10.161Z] WARNING: Unable to find version of CDP to use for 145.0.7632.160. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[2026-03-10T11:45:10.161Z] Chrome Browser initialized successfully
+[2026-03-10T11:45:10.161Z] 
+[2026-03-10T11:45:10.161Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:10.161Z] STARTING: testFlightBooking
+[2026-03-10T11:45:10.161Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:10.161Z] 
+[2026-03-10T11:45:10.161Z] ================================================================================
+[2026-03-10T11:45:10.161Z] TEST EXECUTION #4
+[2026-03-10T11:45:10.161Z] ================================================================================
+[2026-03-10T11:45:10.161Z] 
+[2026-03-10T11:45:10.161Z] Test Scenario:
+[2026-03-10T11:45:10.161Z]   Departure: Philadelphia
+[2026-03-10T11:45:10.161Z]   Destination: Rome
+[2026-03-10T11:45:10.161Z]   Passenger: Sarah Williams
+[2026-03-10T11:45:10.161Z]   Flight Selection Method: CHEAPEST
+[2026-03-10T11:45:10.161Z] 
+[2026-03-10T11:45:10.161Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:10.161Z] 
+[2026-03-10T11:45:11.513Z] STEP 1: Navigated to BlazeDemo
+[2026-03-10T11:45:11.513Z] STEP 2: Selected Departure City: Philadelphia
+[2026-03-10T11:45:11.513Z] STEP 3: Selected Destination City: Rome
+[2026-03-10T11:45:12.070Z] STEP 4: Clicked 'Find Flights' button
+[2026-03-10T11:45:12.324Z] STEP 5: Flight list displayed (5 flights available)
+[2026-03-10T11:45:12.324Z] 
+[2026-03-10T11:45:12.324Z]         --------------------------------------------------
+[2026-03-10T11:45:12.324Z]         | # | Airline            | Price     |
+[2026-03-10T11:45:12.324Z]         --------------------------------------------------
+[2026-03-10T11:45:12.324Z]         | 1 | Virgin America     | $472.56   |
+[2026-03-10T11:45:12.324Z]         | 2 | United Airlines    | $432.98   |
+[2026-03-10T11:45:12.324Z]         | 3 | Aer Lingus         | $200.98   |
+[2026-03-10T11:45:12.324Z]         | 4 | Virgin America     | $765.32   |
+[2026-03-10T11:45:12.324Z]         | 5 | Lufthansa          | $233.98   |
+[2026-03-10T11:45:12.324Z]         --------------------------------------------------
+[2026-03-10T11:45:12.324Z] 
+[2026-03-10T11:45:13.240Z] STEP 6: Selected CHEAPEST Flight #3
+[2026-03-10T11:45:13.240Z]         Airline: Aer Lingus | Price: $200.98
+[2026-03-10T11:45:13.240Z] STEP 7: Purchase page displayed with flight details
+[2026-03-10T11:45:14.154Z] STEP 8: Entered personal details
+[2026-03-10T11:45:14.154Z]         Name: Sarah Williams
+[2026-03-10T11:45:14.154Z]         Address: 712 Main Street, Chicago, NY 98341
+[2026-03-10T11:45:14.708Z] STEP 9: Entered payment details
+[2026-03-10T11:45:14.708Z]         Card: ****-****-****-9012
+[2026-03-10T11:45:14.708Z]         Expiry: 10/2025
+[2026-03-10T11:45:15.262Z] STEP 10: Clicked 'Purchase Flight' button
+[2026-03-10T11:45:15.514Z] STEP 11: Booking Confirmation Received
+[2026-03-10T11:45:15.514Z]         Message: Thank you for your purchase today!
+[2026-03-10T11:45:15.514Z] 
+[2026-03-10T11:45:15.514Z]         ==================================================
+[2026-03-10T11:45:15.514Z]         BOOKING CONFIRMATION DETAILS
+[2026-03-10T11:45:15.514Z]         ==================================================
+[2026-03-10T11:45:15.514Z]         Confirmation ID: 1773143121412
+[2026-03-10T11:45:15.514Z]         Status: PendingCapture
+[2026-03-10T11:45:15.514Z]         Total Amount: 555 USD
+[2026-03-10T11:45:15.514Z]         ==================================================
+[2026-03-10T11:45:15.514Z] 
+[2026-03-10T11:45:15.514Z] ================================================================================
+[2026-03-10T11:45:15.514Z] TEST #4 COMPLETED SUCCESSFULLY
+[2026-03-10T11:45:15.514Z] Flight booked: Philadelphia -> Rome for Sarah Williams
+[2026-03-10T11:45:15.514Z] ================================================================================
+[2026-03-10T11:45:15.514Z] 
+[2026-03-10T11:45:15.514Z] 
+[2026-03-10T11:45:15.514Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:15.514Z] ? PASSED: testFlightBooking (Duration: 5s)
+[2026-03-10T11:45:15.514Z] 
+[2026-03-10T11:45:15.514Z] ? TEST PASSED - Capturing Screenshot...
+[2026-03-10T11:45:15.514Z] ? Screenshot saved: C:\ProgramData\Jenkins\.jenkins\workspace\FightTicketAutomation\screenshots\PASSED_4_testFlightBooking_20260310_171515.png
+[2026-03-10T11:45:15.514Z] ? Screenshot Location: screenshots\PASSED_4_testFlightBooking_20260310_171515.png
+[2026-03-10T11:45:15.514Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:15.514Z] 
+[2026-03-10T11:45:16.068Z] Browser closed successfully
+[2026-03-10T11:45:16.622Z] Mar 10, 2026 5:15:16 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+[2026-03-10T11:45:16.622Z] WARNING: Unable to find CDP implementation matching 145
+[2026-03-10T11:45:16.622Z] Mar 10, 2026 5:15:16 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+[2026-03-10T11:45:16.622Z] WARNING: Unable to find version of CDP to use for 145.0.7632.160. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[2026-03-10T11:45:16.622Z] Chrome Browser initialized successfully
+[2026-03-10T11:45:16.622Z] 
+[2026-03-10T11:45:16.622Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:16.622Z] STARTING: testFlightBooking
+[2026-03-10T11:45:16.622Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:16.622Z] 
+[2026-03-10T11:45:16.622Z] ================================================================================
+[2026-03-10T11:45:16.622Z] TEST EXECUTION #5
+[2026-03-10T11:45:16.622Z] ================================================================================
+[2026-03-10T11:45:16.622Z] 
+[2026-03-10T11:45:16.622Z] Test Scenario:
+[2026-03-10T11:45:16.622Z]   Departure: San Diego
+[2026-03-10T11:45:16.622Z]   Destination: Cairo
+[2026-03-10T11:45:16.622Z]   Passenger: David Brown
+[2026-03-10T11:45:16.622Z]   Flight Selection Method: 3
+[2026-03-10T11:45:16.622Z] 
+[2026-03-10T11:45:16.622Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:16.622Z] 
+[2026-03-10T11:45:17.540Z] STEP 1: Navigated to BlazeDemo
+[2026-03-10T11:45:17.793Z] STEP 2: Selected Departure City: San Diego
+[2026-03-10T11:45:18.048Z] STEP 3: Selected Destination City: Cairo
+[2026-03-10T11:45:18.302Z] STEP 4: Clicked 'Find Flights' button
+[2026-03-10T11:45:18.555Z] STEP 5: Flight list displayed (5 flights available)
+[2026-03-10T11:45:18.555Z] 
+[2026-03-10T11:45:18.555Z]         --------------------------------------------------
+[2026-03-10T11:45:18.555Z]         | # | Airline            | Price     |
+[2026-03-10T11:45:18.555Z]         --------------------------------------------------
+[2026-03-10T11:45:18.555Z]         | 1 | Virgin America     | $472.56   |
+[2026-03-10T11:45:18.555Z]         | 2 | United Airlines    | $432.98   |
+[2026-03-10T11:45:18.555Z]         | 3 | Aer Lingus         | $200.98   |
+[2026-03-10T11:45:18.555Z]         | 4 | Virgin America     | $765.32   |
+[2026-03-10T11:45:18.555Z]         | 5 | Lufthansa          | $233.98   |
+[2026-03-10T11:45:18.555Z]         --------------------------------------------------
+[2026-03-10T11:45:18.555Z] 
+[2026-03-10T11:45:19.473Z] STEP 6: Selected Flight #3
+[2026-03-10T11:45:19.473Z]         Airline: Aer Lingus | Price: $200.98
+[2026-03-10T11:45:19.473Z] STEP 7: Purchase page displayed with flight details
+[2026-03-10T11:45:20.390Z] STEP 8: Entered personal details
+[2026-03-10T11:45:20.390Z]         Name: David Brown
+[2026-03-10T11:45:20.390Z]         Address: 8119 Main Street, Los Angeles, AZ 45304
+[2026-03-10T11:45:21.305Z] STEP 9: Entered payment details
+[2026-03-10T11:45:21.305Z]         Card: ****-****-****-9012
+[2026-03-10T11:45:21.305Z]         Expiry: 10/2026
+[2026-03-10T11:45:21.559Z] STEP 10: Clicked 'Purchase Flight' button
+[2026-03-10T11:45:21.811Z] STEP 11: Booking Confirmation Received
+[2026-03-10T11:45:21.811Z]         Message: Thank you for your purchase today!
+[2026-03-10T11:45:21.811Z] 
+[2026-03-10T11:45:21.811Z]         ==================================================
+[2026-03-10T11:45:21.811Z]         BOOKING CONFIRMATION DETAILS
+[2026-03-10T11:45:21.811Z]         ==================================================
+[2026-03-10T11:45:21.811Z]         Confirmation ID: 1773143127850
+[2026-03-10T11:45:21.811Z]         Status: PendingCapture
+[2026-03-10T11:45:21.811Z]         Total Amount: 555 USD
+[2026-03-10T11:45:21.811Z]         ==================================================
+[2026-03-10T11:45:21.811Z] 
+[2026-03-10T11:45:21.811Z] ================================================================================
+[2026-03-10T11:45:21.811Z] TEST #5 COMPLETED SUCCESSFULLY
+[2026-03-10T11:45:21.811Z] Flight booked: San Diego -> Cairo for David Brown
+[2026-03-10T11:45:21.811Z] ================================================================================
+[2026-03-10T11:45:21.811Z] 
+[2026-03-10T11:45:21.811Z] 
+[2026-03-10T11:45:21.811Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:21.811Z] ? PASSED: testFlightBooking (Duration: 5s)
+[2026-03-10T11:45:21.811Z] 
+[2026-03-10T11:45:21.811Z] ? TEST PASSED - Capturing Screenshot...
+[2026-03-10T11:45:21.811Z] ? Screenshot saved: C:\ProgramData\Jenkins\.jenkins\workspace\FightTicketAutomation\screenshots\PASSED_5_testFlightBooking_20260310_171521.png
+[2026-03-10T11:45:21.811Z] ? Screenshot Location: screenshots\PASSED_5_testFlightBooking_20260310_171521.png
+[2026-03-10T11:45:21.811Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:21.811Z] 
+[2026-03-10T11:45:22.366Z] Browser closed successfully
+[2026-03-10T11:45:22.366Z] 
+[2026-03-10T11:45:22.366Z] ================================================================================
+[2026-03-10T11:45:22.366Z] TEST SUITE FINISHED: Flight Booking End-to-End Tests
+[2026-03-10T11:45:22.366Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:22.366Z] Total: 1 | Passed: 5 | Failed: 0 | Skipped: 0
+[2026-03-10T11:45:22.366Z] --------------------------------------------------------------------------------
+[2026-03-10T11:45:22.366Z] ? Screenshots - Passed: 5 | Failed: 0
+[2026-03-10T11:45:22.366Z] ================================================================================
+[2026-03-10T11:45:22.366Z] 
+[2026-03-10T11:45:22.366Z] Excel workbook closed
+[2026-03-10T11:45:22.366Z] 
+[2026-03-10T11:45:22.366Z] ================================================================================
+[2026-03-10T11:45:22.366Z] TEST SUITE EXECUTION COMPLETED
+[2026-03-10T11:45:22.366Z] Total Tests Executed: 5
+[2026-03-10T11:45:22.366Z] ? Screenshots: Screenshots - Passed: 5 | Failed: 0
+[2026-03-10T11:45:22.366Z] ? Screenshots Folder: screenshots
+[2026-03-10T11:45:22.366Z] ================================================================================
+[2026-03-10T11:45:22.366Z] 
+[2026-03-10T11:45:22.619Z] [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.691 s - in TestSuite
+[2026-03-10T11:45:22.870Z] [INFO] 
+[2026-03-10T11:45:22.870Z] [INFO] Results:
+[2026-03-10T11:45:22.870Z] [INFO] 
+[2026-03-10T11:45:22.870Z] [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[2026-03-10T11:45:22.870Z] [INFO] 
+[2026-03-10T11:45:22.870Z] [INFO] ------------------------------------------------------------------------
+[2026-03-10T11:45:22.870Z] [INFO] BUILD SUCCESS
+[2026-03-10T11:45:22.870Z] [INFO] ------------------------------------------------------------------------
+[2026-03-10T11:45:22.870Z] [INFO] Total time:  35.254 s
+[2026-03-10T11:45:22.870Z] [INFO] Finished at: 2026-03-10T17:15:22+05:30
+[2026-03-10T11:45:22.870Z] [INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] junit
+[2026-03-10T11:45:23.155Z] Recording test results
+[2026-03-10T11:45:23.281Z] [Checks API] No suitable checks publisher found.
+[Pipeline] archiveArtifacts
+[2026-03-10T11:45:23.307Z] Archiving artifacts
+[Pipeline] echo
+[2026-03-10T11:45:23.724Z] Flight booking automation completed successfully!
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
